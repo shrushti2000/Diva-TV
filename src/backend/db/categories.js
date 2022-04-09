@@ -1,4 +1,9 @@
 import { v4 as uuid } from "uuid";
+import Makeup from '../../assets/makeup.jpg'
+import Skincare from '../../assets/skincare.jpg'
+import Haircare from '../../assets/haircare.jpg'
+import menstrualHygiene from '../../assets/menstrualHygiene.jpg'
+
 
 /**
  * Category Database can be added here.
@@ -8,20 +13,30 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "Computer Programming",
+    categoryName: "Makeup",
     description:
-      "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing",
+      "All women are pretty without makeup but right makeup can be pretty powerful.",
+      img:Makeup
   },
   {
     _id: uuid(),
-    categoryName: "Frontend Development",
+    categoryName: "Skincare",
     description:
-      "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application",
+      "Good skin is the best foundation for your makeup. Take time to make your skin happy!",
+      img:Skincare
   },
   {
     _id: uuid(),
-    categoryName: "Backend Development",
+    categoryName: "Haircare",
     description:
-      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+      "Hair doesn’t make the woman, but good hair definitely helps.Invest in your hair as it is the crown you never take off",
+      img:Haircare
+  },
+  {
+    _id: uuid(),
+    categoryName: "Menstrual Hygiene",
+    description:
+      "Menstruation is not the problem. Poor menstrual hygiene is!",
+      img:menstrualHygiene
   },
 ];
