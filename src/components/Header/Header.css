@@ -1,0 +1,22 @@
+.navigation-container {
+    background-color: var(--white);
+}
+
+.lib-name-1,
+.lib-name-2 {
+    font-size: 3rem;
+}
+
+.navigation-item-1 {
+    width: 40rem;
+    justify-content: space-between;
+}
+
+.header-link {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+}
+
+.header-link:hover {
+    color: var(--secondary-text-color);
+}

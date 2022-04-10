@@ -1,51 +1,20 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Quicksand:wght@300&display=swap');
+
+html {
+  font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #22201c;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.brand-title {
-  font-size: 3rem;
-  color: #d9d9d9;
-}
-
-.brand-title span {
-  color: #ffde59;
-}
-
-.brand-description {
-  font-size: 1.4rem;
+:root {
+  --primary-text-color: #534340;
+  --secondary-text-color: #BB9981;
 }
 
 .links {
-  display: flex;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.links a {
-  color: #d9d9d9;
-  font-size: 1.2rem;
-  margin: 1rem;
+.icons {
+  font-size: 3rem;
+  cursor: pointer;
 }

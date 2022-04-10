@@ -1,8 +1,8 @@
 import { v4 as uuid } from "uuid";
-import Makeup from '../../assets/makeup.jpg'
-import Skincare from '../../assets/skincare.jpg'
-import Haircare from '../../assets/haircare.jpg'
-import menstrualHygiene from '../../assets/menstrualHygiene.jpg'
+import Makeup from '../../assets/images/makeup.jpg'
+import Skincare from '../../assets/images/skincare.jpg'
+import Haircare from '../../assets/images/haircare.jpg'
+import menstrualHygiene from '../../assets/images/menstrualHygiene.jpg'
 
 
 /**
