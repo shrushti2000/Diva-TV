@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Header } from "./components/index";
+import { Footer, Header } from "./components/index";
 import { Homepage } from "./pages/index.js";
 import "./App.css";
 
@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
