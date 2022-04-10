@@ -4,7 +4,6 @@ import Skincare from '../../assets/images/skincare.jpg'
 import Haircare from '../../assets/images/haircare.jpg'
 import menstrualHygiene from '../../assets/images/menstrualHygiene.jpg'
 
-
 /**
  * Category Database can be added here.
  * You can add category of your wish with different attributes
