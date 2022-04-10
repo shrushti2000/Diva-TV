@@ -9,8 +9,21 @@ export const StateContext = createContext()
 
 const Context = ({ children }) => {
     const [state, dispatch] = useReducer(reducerFunction, {
-        categories: []
+        categories: [],
+        videos:[]
     })
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const res = await axios.get('/api/videos')
+                dispatch({ type: 'SET_VIDEOS', payload: res.data.videos })
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData()
+    }, [])
     
     useEffect(() => {
         async function fetchData() {
