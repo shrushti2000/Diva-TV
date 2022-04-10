@@ -1,0 +1,5 @@
+.main-page{
+    grid-area: main;
+    height: auto;
+    min-height: calc(100vh - 14rem);
+  }
