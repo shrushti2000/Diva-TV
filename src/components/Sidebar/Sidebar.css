@@ -13,7 +13,7 @@
 }
 
 .sidebar-item:hover {
-    background-color: var(--grey);
+    background-color: var(--primary-bg-color);
 }
 
 .sidebar-icon {

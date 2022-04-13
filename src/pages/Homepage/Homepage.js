@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
-import { StateContext } from '../../Context/Context'
+import { useData } from '../../Context/Context'
 import './Homepage.css'
 
 const Homepage = () => {
-  const { state } = useContext(StateContext)
-  
+  const { categories, videos } = useData()
+
   return (
     <>
       <div className='hero-section'>
@@ -16,7 +16,7 @@ const Homepage = () => {
         </div>
       </div>
       <div className='categories-section flex-vt'>
-        {state.categories.map(category => {
+        {categories.map(category => {
           return (
             <div className='category flex-hz jc-sa'>
               <img className='category-img' src={category.img} alt="category-img" />

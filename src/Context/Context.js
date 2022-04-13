@@ -3,6 +3,7 @@ import React from 'react'
 import { createContext } from 'react'
 import { useReducer } from 'react'
 import { useEffect } from 'react'
+import { useContext } from 'react'
 import reducerFunction from '../Reducer/reducerFunction'
 
 export const StateContext = createContext()
@@ -37,8 +38,10 @@ const Context = ({ children }) => {
         fetchData()
     }, [])
     return (
-        <StateContext.Provider value={{ state, dispatch }}>{children}</StateContext.Provider>
+        <StateContext.Provider value={{ categories:state.categories,videos:state.videos }}>{children}</StateContext.Provider>
     )
 }
 
-export default Context;
+const useData=()=>useContext(StateContext)
+
+export {useData,Context};
