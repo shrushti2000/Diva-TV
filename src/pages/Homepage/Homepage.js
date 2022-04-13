@@ -12,7 +12,7 @@ const Homepage = () => {
       <div className='hero-section'>
         <div className='hero-text'>
           <p className='hero-text-primary'>Explore more about makeup,skincare,haircare and menstrual health</p>
-          <Link className='btn btn-outline-primary hero-cta-btn links' to="/videolisting"  >Explore</Link>
+          <Link className='btn btn-outline-primary hero-cta-btn links' to="/videos"  >Explore</Link>
         </div>
       </div>
       <div className='categories-section flex-vt'>
@@ -22,7 +22,7 @@ const Homepage = () => {
               <img className='category-img' src={category.img} alt="category-img" />
               <div>
                 <p className='category-text text-md w-30'>{category.description}</p>
-                <button class="btn btn-outline-info category-btn">Explore more</button>
+                <Link className='btn btn-outline-primary hero-cta-btn links' to="/video"  >Explore more</Link>
               </div>
             </div>
           )
