@@ -1,8 +1,8 @@
 import { v4 as uuid } from "uuid";
-import Makeup from '../../assets/images/makeup.jpg'
-import Skincare from '../../assets/images/skincare.jpg'
-import Haircare from '../../assets/images/haircare.jpg'
-import menstrualHygiene from '../../assets/images/menstrualHygiene.jpg'
+import Makeup from '../../assets/images/3.png'
+import Skincare from '../../assets/images/4.png'
+import Haircare from '../../assets/images/5.png'
+import menstrualHygiene from '../../assets/images/7.png'
 
 /**
  * Category Database can be added here.
@@ -19,11 +19,12 @@ export const categories = [
   },
   {
     _id: uuid(),
-    categoryName: "Skincare",
+    categoryName: "Fashion",
     description:
-      "Good skin is the best foundation for your makeup. Take time to make your skin happy!",
-      img:Skincare
+      "Menstruation is not the problem. Poor menstrual hygiene is!",
+      img:menstrualHygiene
   },
+ 
   {
     _id: uuid(),
     categoryName: "Haircare",
@@ -33,9 +34,10 @@ export const categories = [
   },
   {
     _id: uuid(),
-    categoryName: "Menstrual Hygiene",
+    categoryName: "Skincare",
     description:
-      "Menstruation is not the problem. Poor menstrual hygiene is!",
-      img:menstrualHygiene
+      "Good skin is the best foundation for your makeup. Take time to make your skin happy!",
+      img:Skincare
   },
+  
 ];
