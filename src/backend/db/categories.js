@@ -14,30 +14,30 @@ export const categories = [
     _id: uuid(),
     categoryName: "Makeup",
     description:
-      "All women are pretty without makeup but right makeup can be pretty powerful.",
-      img:Makeup
+      "Know what's the makeup routine of Katrina kaif and Janhavi Kapoor",
+    img: Makeup
   },
   {
     _id: uuid(),
     categoryName: "Fashion",
     description:
-      "Menstruation is not the problem. Poor menstrual hygiene is!",
-      img:menstrualHygiene
+      "Get some awesome fashion tips from our celebrity stylists!",
+    img: menstrualHygiene
   },
- 
+
   {
     _id: uuid(),
     categoryName: "Haircare",
     description:
-      "Hair doesn’t make the woman, but good hair definitely helps.Invest in your hair as it is the crown you never take off",
-      img:Haircare
+      "Know more about maintaining curly hair from Mithila and deepika's hair care routine",
+    img: Haircare
   },
   {
     _id: uuid(),
     categoryName: "Skincare",
     description:
-      "Good skin is the best foundation for your makeup. Take time to make your skin happy!",
-      img:Skincare
+      "Get to know skincare routines of your favourite celebs",
+    img: Skincare
   },
-  
+
 ];
