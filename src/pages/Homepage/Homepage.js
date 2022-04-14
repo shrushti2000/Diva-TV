@@ -17,7 +17,7 @@ const Homepage = () => {
         <div className='hero-text'>
           <p className='hero-text-primary'>Glowing divas is leading digital community for all beauty,fashion ,makeup fanatics out there!</p>
           <p className='hero-text-secondary'>Get styling tips from your favourite celebs!</p>
-          <Link className='btn btn-outline-primary hero-cta-btn links' to="/videolisting"  >Explore</Link>
+          <Link className='btn btn-outline-primary hero-cta-btn links' to="/videos"  >Explore</Link>
         </div>
       </div>
       <div className='categories-section flex-vt'>
