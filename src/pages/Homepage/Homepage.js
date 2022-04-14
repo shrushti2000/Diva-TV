@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
-import { StateContext } from '../../Context/Context'
+import { useData } from '../../Context/Context'
 import './Homepage.css'
 import { categories } from '../../backend/db/categories'
 import masterClass1 from '../../assets/images/8.jpg'
 import masterClass2 from '../../assets/images/9.jpg'
 
 const Homepage = () => {
-  const { state } = useContext(StateContext)
-  
+  const { categories, videos } = useData()
+
   return (
     <>
       <div className='hero-section'>

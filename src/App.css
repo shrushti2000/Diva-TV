@@ -18,3 +18,19 @@ html {
   font-size: 3rem;
   cursor: pointer;
 }
+
+.jc-sb{
+  justify-content: space-between;
+}
+
+.jc-sa{
+  justify-content: space-around;
+}
+
+.main-page-container{
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  grid-template-areas: "sidebar main";
+ 
+}
+
