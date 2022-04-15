@@ -74,7 +74,8 @@ const Signin = () => {
     return (
         <>
             {showtoast === true && <Toast msg={msg} />}
-            <form class="form-container">
+           <div className='main-page'>
+           <form class="form-container">
                 <h5 class="sub-heading">Signin</h5>
                 <div class="form-group flex-vt">
                     <label for="email-input" class="form-label form-field-required" >Email</label>
@@ -89,6 +90,7 @@ const Signin = () => {
                 <button class="btn btn-secondary" onClick={testCredentialsSigninHandler}>Signin with Test Credentials</button>
                 <Link to="/signup" className="links text-link">Create new Account</Link>
             </form>
+           </div>
         </>
     )
 }
