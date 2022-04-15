@@ -81,7 +81,7 @@ export const videos = [
       "From how to prevent ageing, to how to pamper your skin, Divya Khosla Kumar demonstrates it all. Watch on to get a glimpse of Divya Khosla Kumar's skin care favourites and her DIY skin care home remedies.  ",
     category: "Skincare",
     videoId: "4CzDB_-mMfw",
-    uploaded: new Date(2017, 9, 13)
+    uploaded: new Date(2016, 9, 13)
 
   },
   {
@@ -101,7 +101,7 @@ export const videos = [
       "Watch as celebrity stylist, Emma Jade Morison, who works with Emily Ratajkowski, Rosie Huntington-Whiteley, Lily Aldrige, and Martha Hunt walks us through her top 3 looks to wear on a weekend getaway. ",
     category: "Fashion",
     videoId: "Z6Fu2Pyswb8",
-    uploaded: new Date(2020, 4, 25)
+    uploaded: new Date(2022, 3,10 )
 
   },
   {
@@ -111,7 +111,7 @@ export const videos = [
       "Watch Manish Malhotra in the latest Vogue All Access episode! If there's one thing Manish Malhotra is known for, it's his love for 'Bollywood glamour'.",
     category: "Fashion",
     videoId: "jCdGHk1RJ68",
-    uploaded: new Date(2021, 4, 9)
+    uploaded: new Date(2022, 4, 14)
 
   },
   {
