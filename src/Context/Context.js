@@ -11,7 +11,8 @@ export const StateContext = createContext()
 const Context = ({ children }) => {
     const [state, dispatch] = useReducer(reducerFunction, {
         categories: [],
-        videos:[]
+        videos:[],
+        showtoast:false
     })
 
     useEffect(() => {
@@ -38,7 +39,7 @@ const Context = ({ children }) => {
         fetchData()
     }, [])
     return (
-        <StateContext.Provider value={{ categories:state.categories,videos:state.videos }}>{children}</StateContext.Provider>
+        <StateContext.Provider value={{ categories:state.categories,videos:state.videos,showtoast:state.showtoast,dispatch }}>{children}</StateContext.Provider>
     )
 }
 

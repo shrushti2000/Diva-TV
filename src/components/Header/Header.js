@@ -14,7 +14,7 @@ const Header = () => {
           <Link to="/" className='links header-link'>Playlist </Link>
         </div>
         <div class="navigation-item-3 flex-hz">
-          <button class="btn btn-primary">Login</button>
+          <Link to="/signin"><button class="btn btn-primary">Signin</button></Link>
           <FontAwesomeIcon className='icons' icon={faUserCircle}></FontAwesomeIcon>
         </div>
       </div>
