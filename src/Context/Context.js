@@ -11,9 +11,10 @@ export const StateContext = createContext()
 const Context = ({ children }) => {
     const [state, dispatch] = useReducer(reducerFunction, {
         categories: [],
-        videos:[],
-        sortByLatest:false,
-        showtoast:false
+        videos: [],
+        sortByLatest: false,
+        selectedCategory: null,
+        showtoast: false
     })
 
     useEffect(() => {
@@ -27,7 +28,7 @@ const Context = ({ children }) => {
         }
         fetchData()
     }, [])
-    
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -40,10 +41,10 @@ const Context = ({ children }) => {
         fetchData()
     }, [])
     return (
-        <StateContext.Provider value={{ categories:state.categories,videos:state.videos,showtoast:state.showtoast,sortByLatest:state.sortByLatest,dispatch }}>{children}</StateContext.Provider>
+        <StateContext.Provider value={{ categories: state.categories, videos: state.videos, showtoast: state.showtoast, sortByLatest: state.sortByLatest, selectedCategory: state.selectedCategory, dispatch }}>{children}</StateContext.Provider>
     )
 }
 
-const useData=()=>useContext(StateContext)
+const useData = () => useContext(StateContext)
 
-export {useData,Context};
+export { useData, Context };
