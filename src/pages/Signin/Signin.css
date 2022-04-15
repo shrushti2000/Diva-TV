@@ -7,3 +7,7 @@
 ::placeholder {
     color: var(--light-grey);
 }
+
+.btn-secondary{
+    background-color: var(--secondary-text-color);
+}
