@@ -1,7 +1,5 @@
 import React from 'react'
-import { createContext } from 'react'
-import { useContext } from 'react'
-import { useState } from 'react'
+import { createContext,useContext,useState } from 'react'
 
 const AuthContext = createContext()
 
