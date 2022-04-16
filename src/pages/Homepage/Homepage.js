@@ -9,7 +9,7 @@ import businesswomen2 from '../../assets/images/businesswomen2.jpg'
 import businesswomen3 from '../../assets/images/businesswomen3.jpg'
 
 const Homepage = () => {
-  const { categories } = useData()
+  const { categories, dispatch } = useData()
 
   return (
     <>
@@ -28,23 +28,21 @@ const Homepage = () => {
                 <img className='category-img' src={category.img} alt="category-img" />
                 <div>
                   <p className='category-text text-md w-30'>{category.description}</p>
-                  <button class="btn btn-secondary-info category-btn">Explore more</button>
+                  <Link to='/videos'><button class="btn btn-secondary-info category-btn" onClick={() => dispatch({ type: 'SET_SELECTED_CATEGORY', payload: "Makeup" })} >Explore more</button></Link>
                 </div>
               </div>
             )
           } else if (category.categoryName === "Fashion") {
             return (
               <div className='category flex-hz jc-sa'>
-
                 <div>
                   <p className='category-text text-md w-30'>{category.description}</p>
-                  <button class="btn btn-secondary-info category-btn">Explore more</button>
+                  <Link to='/videos'><button class="btn btn-secondary-info category-btn" onClick={() => dispatch({ type: 'SET_SELECTED_CATEGORY', payload: "Fashion" })} >Explore more</button></Link>
                 </div>
                 <img className='category-img' src={category.img} alt="category-img" />
               </div>
             )
           }
-
         })}
       </div>
       <div className='special-category-container flex-vt'>
@@ -63,7 +61,7 @@ const Homepage = () => {
                 <img className='category-img' src={category.img} alt="category-img" />
                 <div>
                   <p className='category-text text-md w-30'>{category.description}</p>
-                  <button class="btn btn-secondary-info category-btn">Explore more</button>
+                  <Link to='/videos'><button class="btn btn-secondary-info category-btn" onClick={() => dispatch({ type: 'SET_SELECTED_CATEGORY', payload: "Haircare" })} >Explore more</button></Link>
                 </div>
 
               </div>
@@ -71,10 +69,9 @@ const Homepage = () => {
           } else if (category.categoryName === "Skincare") {
             return (
               <div className='category flex-hz jc-sa'>
-
                 <div>
                   <p className='category-text text-md w-30'>{category.description}</p>
-                  <button class="btn btn-secondary-info category-btn">Explore more</button>
+                  <Link to='/videos'><button class="btn btn-secondary-info category-btn" onClick={() => dispatch({ type: 'SET_SELECTED_CATEGORY', payload: "Skincare" })} >Explore more</button></Link>
                 </div>
                 <img className='category-img' src={category.img} alt="category-img" />
               </div>)
