@@ -5,7 +5,7 @@
     cursor: pointer;
 }
 
-.video-item-container:hover {
+.video-img-container:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -28,6 +28,7 @@
     position: absolute;
     top: 5px;
     right: 5px;
+    position: relative;
 }
 
 .cta-icon:hover {
@@ -57,4 +58,33 @@
 .video-category {
     font-size: 1.3rem;
     margin: 5px;
+}
+
+.video-item-cta-container {
+    background-color: var(--primary-bg-color);
+    padding: 0.5rem;
+    position: absolute;
+    right: 20px;
+    bottom: -45px;
+    z-index: 2;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1rem;
+}
+
+.video-item-cta-icon {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    width: 10%;
+}
+
+.video-item-cta-text {
+    width: 90%;
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+.video-item-cta-item:hover {
+    border-radius: 0.5rem;
+    background-color: var(--secondary-text-color);
 }
