@@ -1,10 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Footer, Header } from "./components/index";
-
-import { Homepage, VideoListingpage, VideoPage } from "./pages/index.js";
-
-import { Homepage, Signin, Signup, VideoListingpage } from "./pages/index.js";
-
+import { Homepage, Signin, Signup, VideoListingpage,VideoPage } from "./pages/index.js";
 import "./App.css";
 
 function App() {
