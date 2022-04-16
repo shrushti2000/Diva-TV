@@ -1,12 +1,17 @@
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Videocard.css'
 
 const VideoCard = ({ videoItem }) => {
+    const navigate = useNavigate()
+    const openVideoPage = () => {
+        navigate(`/video/${videoItem._id}`)
+    }
 
     return (
-        <div className='video-item-container flex-vt'>
+        <div className='video-item-container flex-vt' onClick={openVideoPage}>
             <div className='video-img-container'>
                 <img className="video-img"
                     src={`http://i1.ytimg.com/vi/${videoItem.videoId}/0.jpg`}
