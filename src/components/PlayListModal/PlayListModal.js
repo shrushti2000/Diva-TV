@@ -1,21 +1,23 @@
 import React from 'react'
 import { useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../Context/AuthProvider'
 import { useData } from '../../Context/Context'
-import { addNewPlayList } from '../../Utility/playlistService'
+import { addNewPlayList, addVideoToPlayList } from '../../Utility/playlistService'
 import './PlayListModal.css'
 
 const PlayListModal = () => {
-    const { dispatch, playlists, showPlaylistModal } = useData()
+    const { dispatch, playlists, showPlaylistModal,currentVideo } = useData()
     const { token } = useAuth()
+    const navigate=useNavigate()
     const [showInputBox, setShowInputBox] = useState(false)
     const [playlistName, setPlayListName] = useState('')
 
     const createPlayListHandler = () => {
-        addNewPlayList(playlistName, dispatch, token)
-        setPlayListName('')
+            addNewPlayList(playlistName, dispatch, token)
+            setPlayListName('')
     }
-
+    
     return (
         <>
             <div class="modal-overlay flex-vt">
@@ -26,7 +28,7 @@ const PlayListModal = () => {
                     </div>
                     <div class="modal-content">
                         <div className='playlist-selection-container flex-vt'>
-                            {playlists.map(playlist => <><span className=' flex-hz'><input className='playlist-selection-item-checkbox' type="checkbox" /><label className='playlist-selection-item-label'>{playlist.title}</label></span></>)}
+                            {playlists.map(playlist => <><span className=' flex-hz'><input className='playlist-selection-item-checkbox' type="checkbox" onChange={(e)=>addVideoToPlayList(playlist._id,dispatch, token,currentVideo,navigate)}/><label className='playlist-selection-item-label'>{playlist.title}</label></span></>)}
                         </div>
                     </div>
                     {showInputBox && <div className='flex-hz'><label className='playlist-label'>Name</label><input value={playlistName} onChange={(e) => setPlayListName(e.target.value)} className='playlist-input' type="text" placeholder='enter playlist name' /></div>}

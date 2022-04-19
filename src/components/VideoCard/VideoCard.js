@@ -6,11 +6,14 @@ import { useState } from 'react'
 import './Videocard.css'
 import { PlayListModal } from '../PlayListModal/PlayListModal'
 import { useData } from '../../Context/Context'
+import { useAuth } from '../../Context/AuthProvider'
 
 const VideoCard = ({ videoItem }) => {
     const navigate = useNavigate()
-    const { showPlaylistModal, dispatch } = useData()
+    const {token}=useAuth()
+    const { showPlaylistModal,currentVideo,setCurrentVideo, dispatch } = useData()
     const [showCTAcontainer, setShowCTAcontainer] = useState(false)
+    
     
     const openVideoPage = (e) => {
         e.preventDefault();
@@ -21,12 +24,18 @@ const VideoCard = ({ videoItem }) => {
     
     const ctaContainerDisplay = (e) => {
         e.preventDefault();
-        setShowCTAcontainer(!showCTAcontainer)
+        if(token){
+            setShowCTAcontainer(!showCTAcontainer)
+        }else{
+            navigate('/signin')
+        }
     }
     
     const displayPlaylistModal = () => {
         dispatch({ type: 'SHOW_PLAYLIST_MODAL', payload: !showPlaylistModal })
+      
         setShowCTAcontainer(!showCTAcontainer)
+        setCurrentVideo(videoItem)
     }
     
     return (
