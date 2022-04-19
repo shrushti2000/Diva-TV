@@ -2,6 +2,7 @@ import { faCircle, faCirclePlay, faClock, faCompass, faHeart, faPlayCircle, faTh
 import { faCompactDisc, faHeartbeat, faHistory, faHome, faStopwatch, faVideo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Sidebar.css'
 
 const Sidebar = () => {
@@ -16,10 +17,12 @@ const Sidebar = () => {
                     <FontAwesomeIcon className='sidebar-icon' icon={faCompass}></FontAwesomeIcon>
                     <p className='sidebar-text'>Explore</p>
                 </div>
-                <div className='sidebar-item flex-hz'>
+                <Link to="/playlists" className='links'> <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faCirclePlay}></FontAwesomeIcon>
-                    <p className='sidebar-text'>Playlist</p>
-                </div>
+                   <p className='sidebar-text'>Playlist</p>
+                   </div>
+                   </Link>
+                
                 <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faThumbsUp}></FontAwesomeIcon>
                     <p className='sidebar-text'>Liked</p>
