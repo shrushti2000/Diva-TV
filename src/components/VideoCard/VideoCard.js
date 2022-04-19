@@ -11,7 +11,7 @@ import { useAuth } from '../../Context/AuthProvider'
 const VideoCard = ({ videoItem }) => {
     const navigate = useNavigate()
     const {token}=useAuth()
-    const { showPlaylistModal,currentVideo,setCurrentVideo, dispatch } = useData()
+    const {playlists, showPlaylistModal,currentVideo,setCurrentVideo, dispatch } = useData()
     const [showCTAcontainer, setShowCTAcontainer] = useState(false)
     
     
@@ -33,11 +33,10 @@ const VideoCard = ({ videoItem }) => {
     
     const displayPlaylistModal = () => {
         dispatch({ type: 'SHOW_PLAYLIST_MODAL', payload: !showPlaylistModal })
-      
         setShowCTAcontainer(!showCTAcontainer)
         setCurrentVideo(videoItem)
     }
-    
+
     return (
         <>
             <div className='video-item-container flex-vt'>

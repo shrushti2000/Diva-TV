@@ -19,10 +19,9 @@ const Sidebar = () => {
                 </div>
                 <Link to="/playlists" className='links'> <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faCirclePlay}></FontAwesomeIcon>
-                   <p className='sidebar-text'>Playlist</p>
-                   </div>
-                   </Link>
-                
+                    <p className='sidebar-text'>Playlist</p>
+                </div>
+                </Link>
                 <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faThumbsUp}></FontAwesomeIcon>
                     <p className='sidebar-text'>Liked</p>
