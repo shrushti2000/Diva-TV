@@ -8,11 +8,13 @@ import './Sidebar.css'
 const Sidebar = () => {
     return (
         <>
-            <div className='sidebar-container flex-vt'>
-                <div className='sidebar-item flex-hz'>
+          <div className='sidebar-container flex-vt'>
+          <Link to="/videos" className='links'>
+          <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faHome}></FontAwesomeIcon>
                     <p className='sidebar-text'>Home</p>
                 </div>
+              </Link>       
                 <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faCompass}></FontAwesomeIcon>
                     <p className='sidebar-text'>Explore</p>

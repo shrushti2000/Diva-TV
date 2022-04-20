@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { Sidebar, VideoCard } from '../../components'
+import { PlaylistVideoCard, Sidebar, VideoCard } from '../../components'
 import { useData } from '../../Context/Context'
 
 const SinglePlaylistPage = () => {
@@ -13,7 +13,7 @@ const SinglePlaylistPage = () => {
             <div className='main-page-container'>
                 <Sidebar />
                 <div className='main-page flex-hz'>
-                    {playlist.videos.map(item => { return (<VideoCard videoItem={item} />) })}
+                    {playlist.videos.map(item => { return (<PlaylistVideoCard videoItem={item} playlistId={playlist._id} />) })}
                 </div>
             </div>
         </>

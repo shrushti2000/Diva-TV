@@ -39,3 +39,33 @@ export const addVideoToPlayList = async (playlistId, dispatch, token, currentVid
     }
    
 }
+
+export const removeVideofromPlaylist=async (playlistId,videoId,token,dispatch,setShowCTAcontainer,showCTAcontainer)=>{
+    try{
+        const res=await axios.delete(`/api/user/playlists/${playlistId}/${videoId}`,
+        {
+            headers: {
+                authorization: token,
+            },
+        })
+        dispatch({type:'UPDATE_PLAY_LIST',payload:res.data.playlist})
+        setShowCTAcontainer(!showCTAcontainer)
+    }catch(error){
+        console.log(error)
+    }
+}
+
+export const deletePlaylist=async (playlistId,token,dispatch,setShowCTAcontainer,showCTAcontainer)=>{
+    try{
+        const res=await axios.delete(`/api/user/playlists/${playlistId}`,{
+            headers: {
+                authorization: token,
+            }, 
+        })
+         dispatch({type:'UPDATE_PLAYLISTS',payload:res.data.playlists})
+         setShowCTAcontainer(!showCTAcontainer)
+        console.log(res.data)
+    }catch(error){
+        console.log(error)
+    }
+}

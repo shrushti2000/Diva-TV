@@ -1,52 +1,13 @@
-.playlist-preview-container {
-    height: 20rem;
-    width: 30rem;
-    margin: 1rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    cursor: pointer;
+.main-page{
+    flex-wrap: wrap;
 }
-
-.playlist-preview-container-col1 {
-    height: 15rem;
-    position: relative;
+.playlist-page-text{
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem;
 }
-
-.playlist-preview-img {
-    width: 100%;
-    height: 15rem;
-    object-fit: cover;
-}
-
-.video-count-overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 50%;
-    height: 15rem;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-
-.playlist-preview-container-col2 {
-    justify-content: space-around;
-}
-
-.playlist-item-count {
-    font-size: 2rem;
-    color: var(--white);
-    margin: 10px;
-}
-
-.preview-icons {
+.playlist-page-link{
     font-size: 2rem;
     cursor: pointer;
-}
-
-.circle-play {
-    color: var(--white);
-    font-size: 2rem;
-}
-
-.playlist-title {
-    font-size: 2rem;
-    margin: 10px;
+    background-color: var(--primary-bg-color);
 }

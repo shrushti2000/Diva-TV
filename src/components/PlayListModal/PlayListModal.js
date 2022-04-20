@@ -32,7 +32,7 @@ const PlayListModal = () => {
                         </div>
                     </div>
                     {showInputBox && <div className='flex-hz'><label className='playlist-label'>Name</label><input value={playlistName} onChange={(e) => setPlayListName(e.target.value)} className='playlist-input' type="text" placeholder='enter playlist name' /></div>}
-                    {playlistName === '' ? <> <button className='btn btn-secondary' onClick={(e) => setShowInputBox(!showInputBox)} >Create new PlayList</button></> : <> <button className='btn btn-secondary' onClick={createPlayListHandler}>Add to PlayList</button></>}
+                    {playlistName === '' ? <> <button className='btn btn-secondary' onClick={(e) => setShowInputBox(!showInputBox)} >Create new PlayList</button></> : <> <button className='btn btn-secondary' onClick={createPlayListHandler}>Create new PlayList</button></>}
                 </div>
             </div>
         </>
