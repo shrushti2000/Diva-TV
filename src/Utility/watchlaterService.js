@@ -1,6 +1,7 @@
 import axios from "axios"
+import { Navigate } from "react-router-dom"
 
-export const addToWatchLater = async (token, dispatch, videoItem) => {
+export const addToWatchLater = async (token, dispatch, videoItem, showCTAcontainer, setShowCTAcontainer, navigate) => {
     if (token) {
         try {
             const res = await axios.post('/api/user/watchlater',
@@ -11,9 +12,31 @@ export const addToWatchLater = async (token, dispatch, videoItem) => {
                     }
                 },
             )
-            dispatch({ type: 'ADD_TO_WATCH_LATER', dispatch: res.data.watchlater })
+            dispatch({ type: 'UPDATE_WATCH_LATER', payload: res.data.watchlater })
+            setShowCTAcontainer(!showCTAcontainer)
         } catch (error) {
             console.log(error)
         }
+    } else {
+        navigate('/signin')
+    }
+}
+
+export const removeFromWatchLater = async (token, dispatch, videoId, showCTAcontainer, setShowCTAcontainer, navigate) => {
+    if (token) {
+        try {
+            const res = await axios.delete(`/api/user/watchlater/${videoId}`, {
+                headers: {
+                    authorization: token
+                }
+            },
+            )
+            dispatch({ type: 'UPDATE_WATCH_LATER', payload: res.data.watchlater })
+            setShowCTAcontainer(!showCTAcontainer)
+        } catch (error) {
+            console.log(error)
+        }
+    } else {
+        navigate('/signin')
     }
 }

@@ -9,7 +9,7 @@ const reducerFunction = (state, action) => {
     case 'SHOW_PLAYLIST_MODAL': return { ...state, showPlaylistModal: action.payload }
     case 'UPDATE_PLAY_LIST':return {...state,playlists:state.playlists.map(playlist=>playlist._id===action.payload._id ? action.payload:playlist)}
     case 'UPDATE_PLAYLISTS':return{...state,playlists:action.payload}
-    case 'ADD_TO_WATCH_LATER':return {...state,watchlater:action.payload}
+    case 'UPDATE_WATCH_LATER':return {...state,watchlater:action.payload}
     default :return state
   }
 }
