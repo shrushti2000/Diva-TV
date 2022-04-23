@@ -3,7 +3,6 @@
     margin: 2rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     cursor: pointer;
-    position: relative;
 }
 
 .video-img-container:hover {
@@ -29,7 +28,7 @@
     position: absolute;
     top: 5px;
     right: 5px;
-  
+    position: relative;
 }
 
 .cta-icon:hover {
@@ -61,12 +60,12 @@
     margin: 5px;
 }
 
-.video-cta-container {
+.video-item-cta-container {
     background-color: var(--primary-bg-color);
     padding: 0.5rem;
     position: absolute;
     right: 20px;
-    bottom: -48px;
+    bottom: 5px;
     z-index: 2;
     width: fit-content;
     height: fit-content;
@@ -79,13 +78,11 @@
     width: 10%;
 }
 
-.video-item-cta-text {
-    width: 90%;
-    font-size: 2rem;
-    margin: 0.5rem;
-}
-
 .video-item-cta-item:hover {
     border-radius: 0.5rem;
     background-color: var(--secondary-text-color);
+}
+
+.playlist-video-item-cta-text {
+    font-size: 1rem;
 }

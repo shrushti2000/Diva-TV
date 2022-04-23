@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import { Footer, Header } from "./components/index";
-import { Homepage, Signin, Signup, VideoListingpage,VideoPage } from "./pages/index.js";
+import { Homepage, Signin, Signup, VideoListingpage,VideoPage,Playlistpage, SinglePlaylistPage } from "./pages/index.js";
 import "./App.css";
+
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
 
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
-
+        <Route path="/playlists" element={<Playlistpage />} />
+        <Route path='/playlists/:playlistId' element={<SinglePlaylistPage />} />
       </Routes>
       <Footer/>
     </>

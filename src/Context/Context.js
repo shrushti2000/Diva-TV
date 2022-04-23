@@ -4,6 +4,7 @@ import { createContext } from 'react'
 import { useReducer } from 'react'
 import { useEffect } from 'react'
 import { useContext } from 'react'
+import { useState } from 'react'
 import reducerFunction from '../Reducer/reducerFunction'
 
 export const StateContext = createContext()
@@ -14,9 +15,11 @@ const Context = ({ children }) => {
         videos: [],
         sortByLatest: false,
         selectedCategory: null,
-        showtoast: false
+        showtoast: false,
+        playlists:[],
+        showPlaylistModal:false
     })
-
+    const [currentVideo,setCurrentVideo]=useState({})
     useEffect(() => {
         async function fetchData() {
             try {
@@ -41,7 +44,7 @@ const Context = ({ children }) => {
         fetchData()
     }, [])
     return (
-        <StateContext.Provider value={{ categories: state.categories, videos: state.videos, showtoast: state.showtoast, sortByLatest: state.sortByLatest, selectedCategory: state.selectedCategory, dispatch }}>{children}</StateContext.Provider>
+        <StateContext.Provider value={{ categories: state.categories, videos: state.videos, showtoast: state.showtoast, sortByLatest: state.sortByLatest, selectedCategory: state.selectedCategory,playlists:state.playlists,showPlaylistModal:state.showPlaylistModal,currentVideo:currentVideo,setCurrentVideo:setCurrentVideo, dispatch }}>{children}</StateContext.Provider>
     )
 }
 
