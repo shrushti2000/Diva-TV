@@ -7,6 +7,7 @@ import './Videocard.css'
 import { PlayListModal } from '../PlayListModal/PlayListModal'
 import { useData } from '../../Context/Context'
 import { useAuth } from '../../Context/AuthProvider'
+import { addToWatchLater } from '../../Utility/watchlaterService'
 
 const VideoCard = ({ videoItem }) => {
     const navigate = useNavigate()
@@ -56,7 +57,7 @@ const VideoCard = ({ videoItem }) => {
                         <FontAwesomeIcon className="cta-icon" icon={faEllipsisVertical} onClick={(e) => ctaContainerDisplay(e)}></FontAwesomeIcon>
                         {showCTAcontainer && <>
                             <div className='video-cta-container flex-vt'>
-                                <div className='video-item-cta-item flex-hz'><FontAwesomeIcon className='video-item-cta-icon' icon={faClock}></FontAwesomeIcon><p className='video-item-cta-text'>Add to Watch Later</p></div>
+                                <div className='video-item-cta-item flex-hz'><FontAwesomeIcon className='video-item-cta-icon' icon={faClock}></FontAwesomeIcon><p className='video-item-cta-text' onClick={()=>addToWatchLater(token,dispatch,videoItem)}>Add to Watch Later</p></div>
                                 <div className='video-item-cta-item flex-hz' onClick={displayPlaylistModal}><FontAwesomeIcon className='video-item-cta-icon' icon={faCirclePlay}></FontAwesomeIcon><p className='video-item-cta-text'>Add to Playlist</p></div>
                             </div>
                         </>}
