@@ -15,7 +15,7 @@ const WatchLater = () => {
         <div className='main-page-container'>
             <Sidebar />
             <div className='main-page flex-hz'>
-                {watchlater.length===0 ? <div className='flex-vt'><p className='playlist-page-text'>You haven't saved any playlist yet .</p><Link to="/videos" className='links'><button className='btn btn-secondary playlist-page-link'>Get started</button></Link></div>:<>{watchlater.map(video => {
+                {watchlater.length===0 ? <div className='flex-vt'><p className='playlist-page-text'>You haven't saved any videos yet .</p><Link to="/videos" className='links'><button className='btn btn-secondary playlist-page-link'>Get started</button></Link></div>:<>{watchlater.map(video => {
                     return (<>
                        <VideoCard videoItem={video}/>
                     </>)
