@@ -18,7 +18,6 @@ const Context = ({ children }) => {
         showtoast: false,
         playlists:[],
         showPlaylistModal:false,
-        watchlater:[],
         likedVideos:[]
     })
     const [currentVideo,setCurrentVideo]=useState({})
@@ -46,7 +45,7 @@ const Context = ({ children }) => {
         fetchData()
     }, [])
     return (
-        <StateContext.Provider value={{ categories: state.categories, videos: state.videos, showtoast: state.showtoast, sortByLatest: state.sortByLatest, selectedCategory: state.selectedCategory,playlists:state.playlists,showPlaylistModal:state.showPlaylistModal,currentVideo:currentVideo,setCurrentVideo:setCurrentVideo, watchlater:state.watchlater,likedVideos:state.likedVideos,dispatch }}>{children}</StateContext.Provider>
+        <StateContext.Provider value={{ categories: state.categories, videos: state.videos, showtoast: state.showtoast, sortByLatest: state.sortByLatest, selectedCategory: state.selectedCategory,playlists:state.playlists,showPlaylistModal:state.showPlaylistModal,currentVideo:currentVideo,setCurrentVideo:setCurrentVideo,likedVideos:state.likedVideos,watchedVideos:state.watchedVideos,dispatch }}>{children}</StateContext.Provider>
     )
 }
 
