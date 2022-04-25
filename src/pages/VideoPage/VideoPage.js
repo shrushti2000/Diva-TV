@@ -28,7 +28,7 @@ const VideoPage = () => {
             }
         }
         fetchVideo()
-    }, [videoId, likedVideos])
+    }, [videoId])
 
     return (
         <div className='main-page-container'>
