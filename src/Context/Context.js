@@ -18,7 +18,8 @@ const Context = ({ children }) => {
         showtoast: false,
         playlists:[],
         showPlaylistModal:false,
-        watchlater:[]
+        watchlater:[],
+        likedVideos:[]
     })
     const [currentVideo,setCurrentVideo]=useState({})
     useEffect(() => {
