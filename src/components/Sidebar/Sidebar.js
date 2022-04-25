@@ -32,10 +32,12 @@ const Sidebar = () => {
                     <FontAwesomeIcon className='sidebar-icon' icon={faHistory}></FontAwesomeIcon>
                     <p className='sidebar-text'>History</p>
                 </div>
-                <div className='sidebar-item flex-hz'>
+               <Link to="/watchlater" className='links'>
+               <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faClock}></FontAwesomeIcon>
                     <p className='sidebar-text'>Watch later</p>
                 </div>
+               </Link>
             </div>
         </>
     )
