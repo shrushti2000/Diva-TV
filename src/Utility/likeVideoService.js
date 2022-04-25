@@ -20,3 +20,17 @@ export const addVideoToLikedVideos = async (token, videoItem, dispatch, navigate
         navigate('/signin')
     }
 }
+
+export const removeFromlikedVideos=async(token, dispatch, videoItemId, showCTAcontainer, setShowCTAcontainer,navigate)=>{
+    try{
+        const res=await axios.delete(`/api/user/likes/${videoItemId}`,{
+            headers:{
+                authorization:token
+            }
+        })
+        dispatch({ type: 'ADD_VIDEO_TO_LIKED_VIDEOS', payload: res.data.likes })
+        setShowCTAcontainer(!showCTAcontainer)
+    }catch(error){
+        console.log(error)
+    }
+}

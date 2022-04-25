@@ -24,10 +24,12 @@ const Sidebar = () => {
                     <p className='sidebar-text'>Playlist</p>
                 </div>
                 </Link>
-                <div className='sidebar-item flex-hz'>
+               <Link to="/likedvideos" className='links'>
+               <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faThumbsUp}></FontAwesomeIcon>
                     <p className='sidebar-text'>Liked</p>
                 </div>
+               </Link>
                 <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faHistory}></FontAwesomeIcon>
                     <p className='sidebar-text'>History</p>
