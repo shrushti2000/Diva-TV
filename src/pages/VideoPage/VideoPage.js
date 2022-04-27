@@ -1,16 +1,23 @@
 import React from 'react'
 import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
 import './VideoPage.css'
 import { Sidebar } from '../../components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlay, faClock, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import { addVideoToLikedVideos, removeFromlikedVideos } from '../../Utility/likeVideoService'
+import { useData } from '../../Context/Context'
+import { useAuth } from '../../Context/AuthProvider'
+import { LikedVideosPage } from '../LikedVideosPage/LikedVideosPage'
 const VideoPage = () => {
     const { videoId } = useParams()
+    const navigate = useNavigate()
+    const { token } = useAuth()
+    const { dispatch, likedVideos } = useData()
     const [video, setVideo] = useState({})
-    console.log(video)
+
     useEffect(() => {
         async function fetchVideo() {
             try {
@@ -22,6 +29,7 @@ const VideoPage = () => {
         }
         fetchVideo()
     }, [videoId])
+
     return (
         <div className='main-page-container'>
             <Sidebar />
@@ -31,7 +39,7 @@ const VideoPage = () => {
                 </iframe>
                 <p className='video-page-title'>{video.title}</p>
                 <div className='video-page-action-container flex-hz'>
-                    <div className='video-page-action flex-hz' ><FontAwesomeIcon className='video-page-action-icon' icon={faThumbsUp}></FontAwesomeIcon> <p className='video-page-action-text'>Like</p></div>
+                    <div className='video-page-action flex-hz' onClick={() => addVideoToLikedVideos(token, video, dispatch, navigate)}><FontAwesomeIcon className='video-page-action-icon' icon={faThumbsUp}></FontAwesomeIcon> <p className='video-page-action-text'>Like</p></div>
                     <div className='video-page-action flex-hz'><FontAwesomeIcon className='video-page-action-icon' icon={faClock}></FontAwesomeIcon> <p className='video-page-action-text'>Watch later</p></div>
                     <div className='video-page-action flex-hz'><FontAwesomeIcon className='video-page-action-icon' icon={faCirclePlay}></FontAwesomeIcon> <p className='video-page-action-text'>Save</p></div>
                 </div>
