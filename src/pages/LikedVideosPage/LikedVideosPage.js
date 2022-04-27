@@ -17,10 +17,9 @@ const LikedVideosPage = () => {
             <div className='main-page flex-hz'>
                 {likedVideos.length===0 ? <div className='flex-vt'><p className='playlist-page-text'>You haven't liked any videos yet .</p><Link to="/videos" className='links'><button className='btn btn-secondary playlist-page-link'>Get started</button></Link></div>:<>{likedVideos.map(video => {
                     return (<>
-                       <VideoCard videoItem={video}/>
+                       <VideoCard videoItem={video} key={video._id}/>
                     </>)
                 })}</>}
-                
             </div>
         </div>
     )
