@@ -59,11 +59,13 @@ const VideoCard = ({ videoItem }) => {
 
   return (
     <>
-      <div
-        className="video-item-container flex-vt"
-        
-      >
-        <div className="video-img-container" onClick={(e) => addVideoToHistory(token, videoItem, dispatch, navigate)}>
+      <div className="video-item-container flex-vt">
+        <div
+          className="video-img-container"
+          onClick={(e) =>
+            addVideoToHistory(token, videoItem, dispatch, navigate)
+          }
+        >
           <img
             className="video-img"
             src={`http://i1.ytimg.com/vi/${videoItem.videoId}/0.jpg`}
