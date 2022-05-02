@@ -10,7 +10,6 @@ import { PlaylistPreviewCard, Sidebar, VideoCard } from "../../components";
 import { useAuth } from "../../Context/AuthProvider";
 import { useData } from "../../Context/Context";
 import { deletePlaylist } from "../../Utility/playlistService";
-import "./WatchLater.css";
 
 const WatchLater = () => {
   const { watchlater } = useData();
