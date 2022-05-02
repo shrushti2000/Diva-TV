@@ -11,6 +11,8 @@ import { addVideoToLikedVideos, removeFromlikedVideos } from '../../Utility/like
 import { useData } from '../../Context/Context'
 import { useAuth } from '../../Context/AuthProvider'
 import { LikedVideosPage } from '../LikedVideosPage/LikedVideosPage'
+import { addVideoToHistory } from '../../Utility/historyService'
+
 const VideoPage = () => {
     const { videoId } = useParams()
     const navigate = useNavigate()
@@ -35,7 +37,7 @@ const VideoPage = () => {
             <Sidebar />
             <div className='main-page flex-vt'>
                 <iframe className='video-container' width="100%"
-                    height="100%" src={`https://www.youtube.com/embed/${video.videoId}`}>
+                    height="100%" src={`https://www.youtube.com/embed/${video.videoId}`} onClick={()=>addVideoToHistory(token, video, dispatch, navigate)}>
                 </iframe>
                 <p className='video-page-title'>{video.title}</p>
                 <div className='video-page-action-container flex-hz'>

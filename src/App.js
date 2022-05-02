@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { Footer, Header } from "./components/index";
 import { Homepage, Signin, Signup, VideoListingpage,VideoPage,Playlistpage, SinglePlaylistPage, WatchLater, LikedVideosPage } from "./pages/index.js";
 import "./App.css";
+import { HistoryPage } from "./pages/HistoryPage/HistoryPage";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/playlists/:playlistId' element={<SinglePlaylistPage />} />
         <Route path="/watchlater" element={<WatchLater />} />
         <Route path="/likedvideos" element={<LikedVideosPage />} />
+        <Route path="/history" element={<HistoryPage />} />
       </Routes>
       <Footer/>
     </>

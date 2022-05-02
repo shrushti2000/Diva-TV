@@ -90,7 +90,7 @@
     background-color: var(--secondary-text-color);
 }
 
-.remove-from-watchlater{
+.remove-from-watchlater,.remove-from-watchedVideos{
     font-size: 1rem;
     background-color: var(--primary-bg-color);
     padding: 0.5rem;

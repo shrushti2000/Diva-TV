@@ -11,6 +11,7 @@ const reducerFunction = (state, action) => {
     case 'UPDATE_PLAYLISTS':return{...state,playlists:action.payload}
     case 'UPDATE_WATCH_LATER':return {...state,watchlater:action.payload}
     case 'ADD_VIDEO_TO_LIKED_VIDEOS':return {...state,likedVideos:action.payload}
+    case 'UPDATE_HISTORY':return {...state,watchedVideos:action.payload}
     default :return state
   }
 }

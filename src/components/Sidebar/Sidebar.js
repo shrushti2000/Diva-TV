@@ -30,10 +30,12 @@ const Sidebar = () => {
                     <p className='sidebar-text'>Liked</p>
                 </div>
                </Link>
+                <Link to="/history" className='links'>
                 <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faHistory}></FontAwesomeIcon>
                     <p className='sidebar-text'>History</p>
                 </div>
+                </Link>
                <Link to="/watchlater" className='links'>
                <div className='sidebar-item flex-hz'>
                     <FontAwesomeIcon className='sidebar-icon' icon={faClock}></FontAwesomeIcon>
