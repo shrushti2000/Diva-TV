@@ -1,8 +1,8 @@
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-import { Sidebar } from '../../components'
+import { HistoryVideoCard, Sidebar } from '../../components'
 import { useAuth } from '../../Context/AuthProvider'
 import { useData } from '../../Context/Context'
-import { HistoryVideoCard } from '../../components/HistoryVideoCard/HistoryVideoCard'
+
 import './HistoryPage.css'
 import { clearHistory } from '../../Utility/historyService'
 

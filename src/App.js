@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Footer, Header } from "./components/index";
+import { Footer, Header } from "./components";
 import { Homepage, Signin, Signup, VideoListingpage,VideoPage,Playlistpage, SinglePlaylistPage, WatchLater, LikedVideosPage } from "./pages/index.js";
 import "./App.css";
 import { HistoryPage } from "./pages/HistoryPage/HistoryPage";
