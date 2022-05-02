@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Karma&family=Mate+SC&family=Quicksand:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karma&family=Mate+SC&family=Quicksand:wght@300&family=Source+Code+Pro:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karma&family=Mate+SC&family=Quicksand:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karma&family=Mate+SC&family=Quicksand:wght@300&family=Source+Code+Pro:wght@300&display=swap");
 html {
   font-size: 62.5%;
 }
 
 :root {
   --primary-text-color: #534340;
-  --secondary-text-color: #BB9981;
+  --secondary-text-color: #bb9981;
 }
 
 .links {
@@ -19,18 +19,16 @@ html {
   cursor: pointer;
 }
 
-.jc-sb{
+.jc-sb {
   justify-content: space-between;
 }
 
-.jc-sa{
+.jc-sa {
   justify-content: space-around;
 }
 
-.main-page-container{
+.main-page-container {
   display: grid;
   grid-template-columns: 20rem 1fr;
   grid-template-areas: "sidebar main";
- 
 }
-
