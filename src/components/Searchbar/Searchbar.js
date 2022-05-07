@@ -1,9 +1,7 @@
 import React from "react";
-import { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useData } from "../../Context/Context";
-
 import "./Searchbar.css";
 
 const Searchbar = () => {
@@ -12,7 +10,6 @@ const Searchbar = () => {
   const [searchWord, setsearchWord] = useState("");
   const navigate = useNavigate();
   const handleChange = (e) => {
-    console.log("chnage");
     setsearchWord(e.target.value);
     const filteredData = videos.filter((prd) => {
       return prd.title.toLowerCase().includes(searchWord.toLowerCase());

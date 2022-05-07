@@ -8,12 +8,14 @@
   justify-content: center;
   align-items: center;
   visibility: visible;
+  z-index: 5;
 }
 
 .modal-box {
   height: fit-content;
   min-height: 10rem;
   min-width: 30rem;
+  z-index: 5;
 }
 
 .modal-header {

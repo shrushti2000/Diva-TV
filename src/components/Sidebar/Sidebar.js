@@ -13,6 +13,7 @@ import {
   faHistory,
   faHome,
   faStopwatch,
+  faUpload,
   faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -75,6 +76,15 @@ const Sidebar = () => {
               icon={faClock}
             ></FontAwesomeIcon>
             <p className="sidebar-text">Watch later</p>
+          </div>
+        </Link>
+        <Link to="/uploadedVideos" className="links">
+          <div className="sidebar-item flex-hz">
+            <FontAwesomeIcon
+              className="sidebar-icon"
+              icon={faUpload}
+            ></FontAwesomeIcon>
+            <p className="sidebar-text">Upload Video</p>
           </div>
         </Link>
       </div>

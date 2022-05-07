@@ -10,6 +10,7 @@ import {
   SinglePlaylistPage,
   WatchLater,
   LikedVideosPage,
+  UploadedVideos,
 } from "./pages/index.js";
 import "./App.css";
 import { HistoryPage } from "./pages/HistoryPage/HistoryPage";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/watchlater" element={<WatchLater />} />
         <Route path="/likedvideos" element={<LikedVideosPage />} />
         <Route path="/history" element={<HistoryPage />} />
+        <Route path="/uploadedVideos" element={<UploadedVideos />} />
       </Routes>
       <Footer />
     </>
