@@ -47,3 +47,8 @@ export const removeFromlikedVideos = async (
     console.log(error);
   }
 };
+
+export const isLiked=(video,likedVideos)=>{
+  const isVideoLiked=(likedVideos.find(v=>v._id===video._id))
+  return isVideoLiked
+}

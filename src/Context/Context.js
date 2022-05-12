@@ -21,6 +21,7 @@ const Context = ({ children }) => {
     likedVideos: [],
     watchlater: [],
     watchedVideos: [],
+    newVideos:[]
   });
   const [currentVideo, setCurrentVideo] = useState({});
   useEffect(() => {
@@ -61,6 +62,7 @@ const Context = ({ children }) => {
         watchlater: state.watchlater,
         likedVideos: state.likedVideos,
         watchedVideos: state.watchedVideos,
+        newVideos:state.newVideos,
         dispatch,
       }}
     >

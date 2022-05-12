@@ -11,14 +11,17 @@ import {
   faClock,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp as regThumbs } from "@fortawesome/free-regular-svg-icons";
 import {
   addVideoToLikedVideos,
+  isLiked,
   removeFromlikedVideos,
 } from "../../Utility/likeVideoService";
 import { useData } from "../../Context/Context";
 import { useAuth } from "../../Context/AuthProvider";
 import { LikedVideosPage } from "../LikedVideosPage/LikedVideosPage";
 import { addVideoToHistory } from "../../Utility/historyService";
+import { faThumbsDown } from "@fortawesome/free-regular-svg-icons";
 
 const VideoPage = () => {
   const { videoId } = useParams();
@@ -37,8 +40,8 @@ const VideoPage = () => {
       }
     }
     fetchVideo();
-  }, [videoId]);
-
+  }, [likedVideos, videoId]);
+  console.log(likedVideos.includes(video));
   return (
     <div className="main-page-container">
       <Sidebar />
@@ -52,18 +55,46 @@ const VideoPage = () => {
         ></iframe>
         <p className="video-page-title">{video.title}</p>
         <div className="video-page-action-container flex-hz">
-          <div
-            className="video-page-action flex-hz"
-            onClick={() =>
-              addVideoToLikedVideos(token, video, dispatch, navigate)
-            }
-          >
-            <FontAwesomeIcon
-              className="video-page-action-icon"
-              icon={faThumbsUp}
-            ></FontAwesomeIcon>{" "}
-            <p className="video-page-action-text">Like</p>
-          </div>
+          {console.log(likedVideos.includes(video))}
+          {isLiked(video, likedVideos) ? (
+            <>
+              <div
+                className="video-page-action flex-hz"
+                onClick={() =>
+                  removeFromlikedVideos(
+                    token,
+                    dispatch,
+                    video._id,
+                    null,
+                    null,
+                    null
+                  )
+                }
+              >
+                <FontAwesomeIcon
+                  className="video-page-action-icon"
+                  icon={faThumbsUp}
+                ></FontAwesomeIcon>{" "}
+                <p className="video-page-action-text">Liked</p>
+              </div>
+            </>
+          ) : (
+            <>
+              {" "}
+              <div
+                className="video-page-action flex-hz"
+                onClick={() =>
+                  addVideoToLikedVideos(token, video, dispatch, navigate)
+                }
+              >
+                <FontAwesomeIcon
+                  className="video-page-action-icon"
+                  icon={regThumbs}
+                ></FontAwesomeIcon>{" "}
+                <p className="video-page-action-text">Like</p>
+              </div>
+            </>
+          )}
           <div className="video-page-action flex-hz">
             <FontAwesomeIcon
               className="video-page-action-icon"

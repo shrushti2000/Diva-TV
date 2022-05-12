@@ -1,3 +1,5 @@
+import { videos } from "../backend/db/videos";
+
 const reducerFunction = (state, action) => {
   switch (action.type) {
     case "SET_CATEGORIES":
@@ -29,6 +31,10 @@ const reducerFunction = (state, action) => {
       return { ...state, likedVideos: action.payload };
     case "UPDATE_HISTORY":
       return { ...state, watchedVideos: action.payload };
+    case "ADD_NEW_VIDEO":
+      return { ...state, videos: [...videos, action.payload] };
+    case "SET_NEW_VIDEOS":
+      return { ...state, newVideos: [...state.newVideos, action.payload] };
     default:
       return state;
   }

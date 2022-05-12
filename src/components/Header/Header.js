@@ -2,6 +2,7 @@ import { faUser, faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
+import { Searchbar } from "../Searchbar/Searchbar";
 import "./Header.css";
 
 const Header = () => {
@@ -21,6 +22,7 @@ const Header = () => {
             Playlist{" "}
           </Link>
         </div>
+        <Searchbar/>
         <div class="navigation-item-3 flex-hz">
           <Link to="/signin">
             <button class="btn btn-primary">Signin</button>
