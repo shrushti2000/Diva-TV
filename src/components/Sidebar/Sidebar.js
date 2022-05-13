@@ -34,13 +34,14 @@ const Sidebar = () => {
             <p className="sidebar-text">Home</p>
           </div>
         </Link>
-        <div className="sidebar-item flex-hz">
+       <Link to="/videos" className="links">
+       <div className="sidebar-item flex-hz">
           <FontAwesomeIcon
             className="sidebar-icon"
             icon={faCompass}
           ></FontAwesomeIcon>
           <p className="sidebar-text">Explore</p>
-        </div>
+        </div></Link>
         <Link to="/playlists" className="links">
           {" "}
           <div className="sidebar-item flex-hz">
