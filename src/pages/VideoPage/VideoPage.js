@@ -40,8 +40,10 @@ const VideoPage = () => {
       }
     }
     fetchVideo();
-  }, [likedVideos, videoId]);
-  console.log(likedVideos.includes(video));
+  }, [ videoId]);
+  
+  const ans=isLiked(video,likedVideos)
+  console.log(ans)
   return (
     <div className="main-page-container">
       <Sidebar />
@@ -55,8 +57,8 @@ const VideoPage = () => {
         ></iframe>
         <p className="video-page-title">{video.title}</p>
         <div className="video-page-action-container flex-hz">
-          {console.log(likedVideos.includes(video))}
-          {isLiked(video, likedVideos) ? (
+      
+           {isLiked(video, likedVideos)!==false ? (
             <>
               <div
                 className="video-page-action flex-hz"
@@ -94,7 +96,10 @@ const VideoPage = () => {
                 <p className="video-page-action-text">Like</p>
               </div>
             </>
-          )}
+          )} 
+              
+             
+            
           <div className="video-page-action flex-hz">
             <FontAwesomeIcon
               className="video-page-action-icon"

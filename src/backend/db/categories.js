@@ -14,9 +14,10 @@ export const categories = [
     _id: uuid(),
     categoryName: "Makeup",
     description:
-      "Know what's the makeup routine of Katrina kaif and Janhavi Kapoor",
+      "Get ready with Katrina and Janhavi! Know what's the makeup routine of favourite celebs",
     img: Makeup
   },
+ 
   {
     _id: uuid(),
     categoryName: "Fashion",
@@ -29,7 +30,7 @@ export const categories = [
     _id: uuid(),
     categoryName: "Haircare",
     description:
-      "Know more about maintaining curly hair from Mithila and deepika's hair care routine",
+      "Know more about maintaining curly hair from Mithila and Deepika",
     img: Haircare
   },
   {
@@ -39,5 +40,11 @@ export const categories = [
       "Get to know skincare routines of your favourite celebs",
     img: Skincare
   },
-
+  {
+    _id: uuid(),
+    categoryName: "Makeup MasterClass",
+    description:
+      "trending masterclass",
+    img: Makeup
+  },
 ];

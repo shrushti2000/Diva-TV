@@ -6,15 +6,17 @@
   right: 10px;
   padding: 5px;
   text-align: center;
-  z-index: 2;
+ z-index: 7;
   background-color: red;
 }
 
 .close-toast-success {
   cursor: pointer;
   padding: 5px;
+ z-index: 7;
 }
 
 .close-toast-success:hover {
   opacity: 0.4;
+ z-index: 7;
 }

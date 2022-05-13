@@ -65,6 +65,26 @@ export const videos = [
 
   },
   {
+    _id: "fhsdjfhofijoj",
+    title: "Lakmé Absolute Glam Makeup Look Tutorial Ft. Namrata Soni & Ananya Panday",
+    description:
+      "Get inspired and get glam! Lakmé presents Masterclass with ace makeup artist Namrata Soni and dazzling Ananya Panday! Learn how to get the fresh off the runway look",
+    category: "Makeup MasterClass",
+    videoId: "8OSrXLU-5wo",
+    uploaded: new Date(2022, 4, 13)
+
+  },
+  {
+    _id: "hbfkjdsnfksd",
+    title: "LAKMÉ MAKE-UP MASTER CLASS BY NAMRATA SONI #SPOTLIGHTREADY | LAKMÉ FASHION WEEK 2020",
+    description:
+      "Watch the live stream of Lakme Master-Class by Namrata Soni #SpotlightReady at Lakmé Fashion Week 2020",
+    category: "Makeup MasterClass",
+    videoId: "J-0YtN-wtR0",
+    uploaded: new Date(2022, 4, 10)
+
+  },
+  {
     _id: "jjyygggtt",
     title: "Madhuri Dixit’s Skincare Routine | Madhuri Dixit Nene",
     description:

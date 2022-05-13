@@ -4,7 +4,7 @@ import { useData } from "../../Context/Context";
 import "./Homepage.css";
 import masterClass1 from "../../assets/images/8.jpg";
 import masterClass2 from "../../assets/images/9.jpg";
-import businesswomen1 from "../../assets/images/businesswomen1.jpg";
+import DivaTvpowerwomen from "../../assets/images/Diva TV.jpg";
 import businesswomen2 from "../../assets/images/businesswomen2.jpg";
 import businesswomen3 from "../../assets/images/businesswomen3.jpg";
 
@@ -16,11 +16,10 @@ const Homepage = () => {
       <div className="hero-section">
         <div className="hero-text">
           <p className="hero-text-primary">
-            Glowing divas is leading digital community for all beauty,fashion
-            ,makeup fanatics out there!
+            Diva TV is a leading online community for all makeup , fashion and beauty enthusiasts !
           </p>
           <p className="hero-text-secondary">
-            Get styling tips from your favourite celebs!
+          Get amazing beauty,styling  and fashion tips from your favourite celebs!
           </p>
           <Link
             className="btn btn-outline-primary hero-cta-btn links"
@@ -91,13 +90,14 @@ const Homepage = () => {
           }
         })}
       </div>
+      <img src={DivaTvpowerwomen} className="power-women"/>
       <div className="special-category-container flex-vt">
         <p className="category-title">
           Trending makeup masterclasses right now!
         </p>
         <div className="flex-hz">
-          <img className="masterclass-img" src={masterClass1} />
-          <img className="masterclass-img" src={masterClass2} />
+        <Link to='/videos'> <img className="masterclass-img" src={masterClass1} onClick={()=>dispatch({type:'SET_SELECTED_CATEGORY',payload:'Makeup MasterClass'})}/></Link> 
+        <Link to='/videos'>   <img className="masterclass-img" src={masterClass2} onClick={()=>dispatch({type:'SET_SELECTED_CATEGORY',payload:'Makeup MasterClass'})}/></Link>
         </div>
       </div>
       <div className="categories-section flex-vt">
@@ -160,17 +160,6 @@ const Homepage = () => {
             );
           }
         })}
-      </div>
-      <div className="special-category-container flex-vt">
-        <p className="category-title">
-          Know more about women who have set great empire in makeup and fashion
-          industries!
-        </p>
-        <div className="flex-hz">
-          <img className="masterclass-img" src={businesswomen1} />
-          <img className="masterclass-img" src={businesswomen2} />
-          <img className="masterclass-img" src={businesswomen3} />
-        </div>
       </div>
     </>
   );

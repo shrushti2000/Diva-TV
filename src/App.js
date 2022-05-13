@@ -11,6 +11,7 @@ import {
   WatchLater,
   LikedVideosPage,
   UploadedVideos,
+  UserProfile,
 } from "./pages/index.js";
 import "./App.css";
 import { HistoryPage } from "./pages/HistoryPage/HistoryPage";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/likedvideos" element={<LikedVideosPage />} />
         <Route path="/history" element={<HistoryPage />} />
         <Route path="/uploadedVideos" element={<UploadedVideos />} />
+        <Route path="userProfile" element={<UserProfile/>}/>
       </Routes>
       <Footer />
     </>

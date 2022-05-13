@@ -22,3 +22,7 @@
 .header-link:hover {
   color: var(--secondary-text-color);
 }
+
+.user-icon{
+  color: var(--primary-text-color);
+}

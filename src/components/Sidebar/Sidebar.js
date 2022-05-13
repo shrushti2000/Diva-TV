@@ -25,7 +25,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="sidebar-container flex-vt">
-        <Link to="/videos" className="links">
+        <Link to="/" className="links">
           <div className="sidebar-item flex-hz">
             <FontAwesomeIcon
               className="sidebar-icon"
