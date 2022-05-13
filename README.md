@@ -1,7 +1,11 @@
-# Naari-Care-Video-Library
+# Diva TV
 
 Diva TV is a video library app for all beauty,makeup and fashion enthusiasts.
 
+<p align="center">
+  <img src="/public/DivaTVLogo.jpg" width="350" title="hover text">
+ 
+</p>
 
 ## Installation
 1.Fork and clone the project in your local machine.
