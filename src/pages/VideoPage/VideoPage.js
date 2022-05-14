@@ -97,23 +97,6 @@ const VideoPage = () => {
               </div>
             </>
           )} 
-              
-             
-            
-          <div className="video-page-action flex-hz">
-            <FontAwesomeIcon
-              className="video-page-action-icon"
-              icon={faClock}
-            ></FontAwesomeIcon>{" "}
-            <p className="video-page-action-text">Watch later</p>
-          </div>
-          <div className="video-page-action flex-hz">
-            <FontAwesomeIcon
-              className="video-page-action-icon"
-              icon={faCirclePlay}
-            ></FontAwesomeIcon>{" "}
-            <p className="video-page-action-text">Save</p>
-          </div>
         </div>
         <p className="page-subtitle">Description</p>
         <p className="video-page-desc">{video.description}</p>

@@ -74,7 +74,7 @@ const UploadVideoModal = ({ showVideoModal, setShowVideoModal }) => {
           </div>
           <div className="flex-hz">
             <p className="label">Enter category</p>
-            <select
+            <select name="category" 
               onChange={(e) =>
                 setVideoDetails({
                   ...videoDetails,
@@ -84,7 +84,7 @@ const UploadVideoModal = ({ showVideoModal, setShowVideoModal }) => {
               className="upload-video-select-category"
             >
               {categories.map((category) => (
-                <option>{category.categoryName}</option>
+                <option value={category.categoryName}  selected="true"  >{category.categoryName}</option>
               ))}
             </select>
           </div>
