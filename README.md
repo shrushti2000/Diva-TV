@@ -46,6 +46,7 @@ Diva TV is a video library app for all beauty,makeup and fashion enthusiasts.
 4. React
 2. Mockbee for backend
 
+![GitHub Logo](./Github%20assets/demo-gif.gif)
 
 ## Show your support
 ⭐ this repository if you really like it!
