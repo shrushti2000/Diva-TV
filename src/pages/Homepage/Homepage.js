@@ -95,7 +95,7 @@ const Homepage = () => {
         <p className="category-title">
           Trending makeup masterclasses right now!
         </p>
-        <div className="flex-hz">
+        <div className="special-category-container1 flex-hz">
         <Link to='/videos'> <img className="masterclass-img" src={masterClass1} onClick={()=>dispatch({type:'SET_SELECTED_CATEGORY',payload:'Makeup MasterClass'})}/></Link> 
         <Link to='/videos'>   <img className="masterclass-img" src={masterClass2} onClick={()=>dispatch({type:'SET_SELECTED_CATEGORY',payload:'Makeup MasterClass'})}/></Link>
         </div>

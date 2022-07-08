@@ -1,8 +1,8 @@
 .hero-section {
   background-image: url("../../assets/images/hero-img.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
   width: 100%;
   height: 55rem;
   margin: 0px;
@@ -13,9 +13,6 @@
 .hero-text {
   height: 10rem;
   width: 50rem;
-  position: absolute;
-  top: 10px;
-  left: 7rem;
   color: var(--primary-text-color);
 }
 
@@ -78,5 +75,71 @@ body {
   width: 100%;
   margin: 1rem;
   height: 55rem;
+}
 
+@media only screen and (max-width: 600px){
+  .hero-section {
+    background-image: url("../../assets/images/hero-img-mb.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+  margin: 0px;
+    
+  }
+  .hero-cta-btn {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    position: absolute;
+    top: 46rem;
+    left: 2rem;
+    margin: 0px;
+  }
+  .hero-text{
+    width: auto;
+    height: fit-content;
+    margin: 0px;
+  }
+  .hero-text-primary {
+    font-size: 2rem;
+    position: absolute;
+    top: 9rem;
+    left: 2rem;
+    margin: 0px;
+  }
+  .hero-text-secondary{
+   display: none;
+  }
+  .category{
+    flex-direction: column;
+    margin: 0px;
+  }
+  .category-btn{
+    margin: 0px;
+  }
+  .category-img {
+    width: auto;
+    height: 20rem;
+  }
+  .special-category-container1{
+    flex-direction: column;
+  }
+  .masterclass-img{
+    width: auto;
+    margin: 0px;
+  }
+  .power-women{
+    width: auto;
+    height: 20rem;
+    margin: 0px;
+  }
+  .category-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0px;
+  }
+  .category-text {
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+    font-family: "Source Code Pro", monospace;
+    margin: 0px;
+  }
 }

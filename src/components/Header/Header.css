@@ -26,3 +26,20 @@
 .user-icon{
   color: var(--primary-text-color);
 }
+
+@media only screen and (max-width: 600px){
+  .navigation-container{
+    width: auto;
+    justify-content: space-between;
+  }
+  .lib-name-1,
+  .lib-name-2 {
+    font-size: 2rem;
+  }
+  .header-link{
+    display: none;
+  }
+  .btn-primary{
+    font-size:2rem ;
+  }
+}
